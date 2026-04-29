@@ -22,6 +22,7 @@ def predict(text:str):
   vec = vectorizer.transform([text])
   prediction = model.predict(vec)[0]
   response_time = time.time() - start_time
+  label = "Spam" if prediction ==1 else "Ham"
 
   return{
       "prediction" : int(prediction),
