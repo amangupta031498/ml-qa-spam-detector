@@ -25,6 +25,6 @@ def predict(text:str):
   label = "Spam" if prediction ==1 else "Ham"
 
   return{
-      "prediction" : int(prediction),
+      "prediction" : label,
       "response_time": response_time
   }
